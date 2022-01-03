@@ -128,3 +128,13 @@ const fantasyOrScienceFictionAuthors = filterByGenre
 const oldBooks = moreThan60y.map((book) => book.name);
 
 // console.log(oldBooks);
+
+// 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+// Dica: cada inicial termina com um ponto.
+
+const authorWith3DotsOnName = books.filter((book) => {
+  const regex = /(?:[A-Z]\.\s){3}/g;
+  return regex.test(book.author.name);
+});
+
+console.log(authorWith3DotsOnName);
